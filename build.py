@@ -1,12 +1,10 @@
 # encoding :utf-8 -*-
 
-import pathlib
-
 from utils import builder
 from utils import argparser
 
 def build():
-	args = argparser.ArgParser()
+	args = argparser.parseArgs()
 	b = builder.Builder(args)
 	b.build()
 

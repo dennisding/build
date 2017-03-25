@@ -1,1 +1,1 @@
-py -3 build.py test/source test/out
+py -3 build.py test/script test/out
