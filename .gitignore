@@ -27,3 +27,12 @@
 *.exe
 *.out
 *.app
+
+# python
+__pycache__
+*.pyo
+*.pyc
+
+# locals
+build.HIH-D-2369.dennisding.pui
+build.prj
