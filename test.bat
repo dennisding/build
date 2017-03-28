@@ -1,1 +1,1 @@
-py -3 build.py test/script test/out
+py -3 build.py Mao test/script test/out

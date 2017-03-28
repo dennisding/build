@@ -1,0 +1,3 @@
+    <ClInclude Include="{FileName}">
+      <Filter>{Filter}</Filter>
+    </ClInclude>

@@ -1,0 +1,3 @@
+    <Filter Include="{FilterId}">
+      <UniqueIdentifier>{{{Uuid}}}</UniqueIdentifier>
+    </Filter>

@@ -6,10 +6,13 @@ class Project(project.Project):
 	def __init__(self, base, name):
 		super().__init__(base, name)
 
-		self.root = '../src/freetype-2.7.1'
+		self.root = '../src/freetype-2.7.1/src'
 
 		self.macros = []
 		self.depends = []
 
 		self.plaotforms = {} # ios win android
 		self.configs = {} # debug release, hybrid
+
+		self.sourceRoot = ''
+		self.includeRoot = ''

@@ -1,7 +1,7 @@
 # -*- encoding:utf-8 -*-
 
 import pathlib
-import WinBuilder
+from . import WinBuilder
 
 class Builder:
 	def __init__(self, args):
@@ -15,6 +15,10 @@ class Builder:
 		self.findProjects()
 		self.prepareProjects()
 		self.genSolutions()
+
+	def iterProjects(self):
+		for name, project in self.projects.items():
+			yield name, project
 
 	def genSolutions(self):
 		if 'win' in self.args.platforms:
