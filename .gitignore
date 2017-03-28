@@ -33,6 +33,9 @@ __pycache__
 *.pyo
 *.pyc
 
+# visual studio
+.vs
+
 # locals
 build.HIH-D-2369.dennisding.pui
 build.prj

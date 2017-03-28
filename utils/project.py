@@ -14,6 +14,7 @@ class Project:
 		self.includeRoot = ''
 
 		self.uuid = uuid.uuid4() # random uuid
+		self.uuid = str(self.uuid).upper()
 
 	def prepare(self, projects):
 		# prepare argument

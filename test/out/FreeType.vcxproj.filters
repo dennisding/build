@@ -2,157 +2,157 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{c68f3685-7f25-44de-80cb-811bb7899c0b}</UniqueIdentifier>
+      <UniqueIdentifier>{2a36dd95-f71b-4772-9042-34139927fafb}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{24f404c9-c405-494e-b93d-1e351f9e1d89}</UniqueIdentifier>
+      <UniqueIdentifier>{a499e6ae-be82-437b-83f7-2ab30ca5be97}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{3bed3734-2152-4c2d-bb8f-b0e4e449d4ce}</UniqueIdentifier>
+      <UniqueIdentifier>{bb9487a3-80b0-4aac-852f-7d80e022704c}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\type1">
-      <UniqueIdentifier>{2da49925-94b7-49fb-b53b-b23f19e9c303}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\psnames">
-      <UniqueIdentifier>{72d71f35-7fdc-4cb5-a75c-2f8b0efb5583}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gxvalid">
-      <UniqueIdentifier>{6a8aa30c-15fa-4ed6-b38c-af51aee6dde5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\psaux">
-      <UniqueIdentifier>{09b21e0d-e1fb-491a-901a-21c4eb6a6a03}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\raster">
-      <UniqueIdentifier>{03d6a476-3ffd-4fcd-8264-7c56c4fa0ac3}</UniqueIdentifier>
+    <Filter Include="Header Files\cid">
+      <UniqueIdentifier>{88f144ed-86d0-4892-8262-638cf0678c2c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\lzw">
-      <UniqueIdentifier>{9d6588a4-c511-4703-95b6-b7c1803cf4ef}</UniqueIdentifier>
+      <UniqueIdentifier>{2876d77f-9fa4-4c72-9529-68b4a8f28508}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\pcf">
-      <UniqueIdentifier>{324a9483-b49b-40e5-850d-6bc125310f81}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\cid">
-      <UniqueIdentifier>{a1e3aaa2-f1a0-40a5-a8a1-b4d43bd2f084}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\tools">
-      <UniqueIdentifier>{ff31364b-bd0c-4120-8a28-b79e25d2d7bb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\raster">
-      <UniqueIdentifier>{36c42920-8cab-4ac9-aaa3-e1a730921394}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\cff">
-      <UniqueIdentifier>{8ee9366b-6d76-446d-aa70-5024a5a9b019}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gxvalid">
-      <UniqueIdentifier>{5961f922-6e38-4ff7-a275-fa3265fa7b79}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\pshinter">
-      <UniqueIdentifier>{6b2b49b2-5b06-4a95-9efa-de41f57af35f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\cache">
-      <UniqueIdentifier>{dd9acdd8-1728-4b44-bd01-8fd2089bb7c0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\type1">
-      <UniqueIdentifier>{a1bb6493-6030-48b3-8fed-4e4e5ec57a21}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\bdf">
-      <UniqueIdentifier>{d88ed83b-420d-426d-9d83-c323939cbf97}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\pfr">
-      <UniqueIdentifier>{54f71228-8012-41b8-b82b-f971b09ec569}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\type42">
-      <UniqueIdentifier>{ee3c13f0-a23a-489c-804f-84a319f9e51d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gzip">
-      <UniqueIdentifier>{eadc3a14-7076-44de-bfef-11a1ffe6063f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\psaux">
-      <UniqueIdentifier>{df44402e-d0bd-473c-8bf1-65759c3b9a50}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\bzip2">
-      <UniqueIdentifier>{e25b6f97-f7dd-4566-bde7-1606a0fdc745}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\truetype">
-      <UniqueIdentifier>{4436fd0b-26fc-465b-9752-679cc753585f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\pfr">
-      <UniqueIdentifier>{193b272c-a554-487e-a48c-1cbeaa6523ee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\type42">
-      <UniqueIdentifier>{aa949277-4b8c-4e2a-aac9-542ef3ae3964}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gzip">
-      <UniqueIdentifier>{d7707855-a210-442e-9056-dcf3d76b6516}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\truetype">
-      <UniqueIdentifier>{98c929b8-bfa2-48e8-95bd-873a253c17d2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\base">
-      <UniqueIdentifier>{66816807-ef94-447e-ac68-c10f6d57f799}</UniqueIdentifier>
+      <UniqueIdentifier>{8584e226-cd94-4954-baae-bc176e0d64b0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\autofit">
-      <UniqueIdentifier>{eea48528-cd64-45cf-b1a2-f61897221b1e}</UniqueIdentifier>
+      <UniqueIdentifier>{365e0a35-c527-4602-b5d0-4a8b24d39c6c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\cff">
-      <UniqueIdentifier>{526606c4-42be-4abd-b68c-cbfa4ba0e445}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\cache">
-      <UniqueIdentifier>{cd2748dc-7aef-446a-b8c8-778d9f464e0a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\pshinter">
-      <UniqueIdentifier>{d1f30235-2458-4c45-a949-7224decc2089}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\sfnt">
-      <UniqueIdentifier>{93e92d19-3434-4fb4-a107-10a3eb864929}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\bdf">
-      <UniqueIdentifier>{0844f5cd-08c2-4457-90ca-29bdff5972bf}</UniqueIdentifier>
+    <Filter Include="Header Files\pfr">
+      <UniqueIdentifier>{8281b0d7-cfd0-4cf8-bcea-5380524a531a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\autofit">
-      <UniqueIdentifier>{f2a4ae1c-9921-4cfa-bff9-95c3f060b8ef}</UniqueIdentifier>
+      <UniqueIdentifier>{fde67475-7853-42c6-84a0-e117b87a7cd5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\psnames">
-      <UniqueIdentifier>{daf2e215-2ede-4cbc-9142-74b20c817f57}</UniqueIdentifier>
+    <Filter Include="Source Files\bzip2">
+      <UniqueIdentifier>{6ededa99-d72b-4590-8894-36c90091df60}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\smooth">
-      <UniqueIdentifier>{05b580d1-de15-440b-bdb8-22bcb8e7e08b}</UniqueIdentifier>
+    <Filter Include="Source Files\cache">
+      <UniqueIdentifier>{8a005560-644a-418f-a8fb-6806f7f0662b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\lzw">
-      <UniqueIdentifier>{1d1d739a-4775-4e0a-b926-2f3e244d48cb}</UniqueIdentifier>
+    <Filter Include="Source Files\tools">
+      <UniqueIdentifier>{92777b84-0db5-41db-b448-001a6ca1a66a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\pcf">
-      <UniqueIdentifier>{b386f2d4-cb21-4389-b0d5-1f6500f0bc43}</UniqueIdentifier>
+    <Filter Include="Source Files\gxvalid">
+      <UniqueIdentifier>{00073b5b-7146-4a17-8a71-055126138cf2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\smooth">
-      <UniqueIdentifier>{48645777-e7e4-42a1-b326-1204c2b1bb78}</UniqueIdentifier>
+    <Filter Include="Source Files\pshinter">
+      <UniqueIdentifier>{8cf8e71c-82fa-481d-b1e9-18bce9a5ecda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\psaux">
+      <UniqueIdentifier>{a2a33fae-d542-48a7-aae4-10581b97b25a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type42">
+      <UniqueIdentifier>{929057cd-a658-4089-ba4a-1e8c3274ed30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\psaux">
+      <UniqueIdentifier>{92a76304-da99-46f5-92b1-4bebca70172a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bdf">
+      <UniqueIdentifier>{3f86c0c0-8863-49ad-ae63-687ecf954ea2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\otvalid">
-      <UniqueIdentifier>{d12b404b-7d4e-4da9-ac6d-ce5af1799a14}</UniqueIdentifier>
+      <UniqueIdentifier>{f2b5dc91-46c4-4283-9b36-29f9c97c7450}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\winfonts">
-      <UniqueIdentifier>{bc056eca-8a20-4c28-b398-8492b72ab85f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\otvalid">
-      <UniqueIdentifier>{cfdc83a5-07de-46fd-bd51-0bbc523eed5a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\tools\ftrandom">
-      <UniqueIdentifier>{6eb05d42-28ef-4c0f-bd69-6f5357b15e2a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\base">
-      <UniqueIdentifier>{57d31299-dc05-4d49-9da3-09652df97d24}</UniqueIdentifier>
+    <Filter Include="Header Files\smooth">
+      <UniqueIdentifier>{2b512deb-1dd7-46aa-b300-113d749eeb9f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\winfonts">
-      <UniqueIdentifier>{33502641-930f-44f9-9d41-3c24f8c0904d}</UniqueIdentifier>
+      <UniqueIdentifier>{eb6a323c-06dd-4e9d-9fab-5c061d65f14e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\truetype">
+      <UniqueIdentifier>{1a87ca1d-989d-444c-b58c-951c6c71cc1c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\sfnt">
-      <UniqueIdentifier>{82b4628f-e3f9-4802-801f-c6d35353dd09}</UniqueIdentifier>
+      <UniqueIdentifier>{bfd8b7e7-fb80-41cd-894a-c4e7f8c0474c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\cid">
-      <UniqueIdentifier>{23768b0a-9f48-479f-aab6-507c7d0795c1}</UniqueIdentifier>
+    <Filter Include="Source Files\raster">
+      <UniqueIdentifier>{15699903-4864-4156-8920-bcf8aa9b7ec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gzip">
+      <UniqueIdentifier>{20e504ef-736d-4c09-8351-f8307278f127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cid">
+      <UniqueIdentifier>{fb83388b-c264-4c1e-99bd-0a909fe22550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cff">
+      <UniqueIdentifier>{2d3a23c9-f71b-493d-9c97-2d5076360e08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\pcf">
+      <UniqueIdentifier>{bb8a6924-f588-4501-9c60-cd0b13348f8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\psnames">
+      <UniqueIdentifier>{fcc24117-93ca-4a7b-9c13-a1300bf18244}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pfr">
+      <UniqueIdentifier>{429fd160-8479-4fbc-b1f7-2458026d1d84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\psnames">
+      <UniqueIdentifier>{03b41c5b-09b7-48a3-9150-d73eb996a518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\cache">
+      <UniqueIdentifier>{2e092c3b-76fc-466e-b03a-a77b71b380c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\pshinter">
+      <UniqueIdentifier>{d944fe9b-4a8a-4f2b-9a30-d738dd751332}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\winfonts">
+      <UniqueIdentifier>{482acdfc-c4ef-4b07-a1b4-4e0f3ba3d920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bdf">
+      <UniqueIdentifier>{ec597c86-bbb3-4e59-9ae0-dfd5f810d7b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gxvalid">
+      <UniqueIdentifier>{47aa6968-28ce-4620-bc35-390fb7c57472}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sfnt">
+      <UniqueIdentifier>{c3f37442-73d4-46f4-b4b0-6fb705b8e3e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\raster">
+      <UniqueIdentifier>{6a50f15c-8bdf-4a6c-8bb9-dff9944bd492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\type42">
+      <UniqueIdentifier>{7394d69a-e9f4-42f6-9118-2225fe21cfb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gzip">
+      <UniqueIdentifier>{782d51db-e6aa-4212-9ea3-c735f50c0fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type1">
+      <UniqueIdentifier>{f0787593-da14-4e5d-b332-32153e57c040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\cff">
+      <UniqueIdentifier>{9217b9a3-7d65-40a7-9dc1-a115cdcc8b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\otvalid">
+      <UniqueIdentifier>{51992523-fa30-4a52-99ea-ba45e114eb17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\smooth">
+      <UniqueIdentifier>{28498033-6681-4ba2-a349-cdc590fdc9e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tools\ftrandom">
+      <UniqueIdentifier>{2abf9f3c-a9af-41f0-ba83-de0c3d989bf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\type1">
+      <UniqueIdentifier>{ef190b97-174e-4ac2-84b4-8d762c4950f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\truetype">
+      <UniqueIdentifier>{ae4ce226-f84a-4aa7-9309-b544c5187ee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base">
+      <UniqueIdentifier>{bd31f4e2-d99c-47b8-aa21-05f683c197b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\base">
+      <UniqueIdentifier>{1c737e74-7657-47b6-af53-2d7684374819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lzw">
+      <UniqueIdentifier>{fda005df-23d0-46e6-84b9-deaad75fb1e1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

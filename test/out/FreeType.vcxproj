@@ -28,7 +28,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{4549f8cc-0aad-4809-be40-fdcdfedae495}</ProjectGuid>
+    <ProjectGuid>{1E107F8B-B5B3-4FC3-A51C-E19749CDD5CE}</ProjectGuid>
     <RootNamespace>FreeType</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
