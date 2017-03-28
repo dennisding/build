@@ -167,7 +167,7 @@ class SlnBuilder:
 		template = self.template.open('sln_project')
 		for name, project in self.builder.iterProjects():
 			maps = {}
-			maps['Uuid'] = project.uuid
+			maps['Uuid'] = str(project.uuid).upper()
 			maps['ProjectName'] = name
 
 			content.append(template.format_map(maps))
@@ -180,7 +180,7 @@ class SlnBuilder:
 		template = self.template.open('sln_config')
 		for name, project in self.builder.iterProjects():
 			maps = {}
-			maps['Uuid'] = project.uuid
+			maps['Uuid'] = str(project.uuid).upper()
 			content.append(template.format_map(maps))
 
 		return ''.join(content)
