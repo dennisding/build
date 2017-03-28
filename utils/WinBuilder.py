@@ -14,7 +14,8 @@ class ProjectBuilder:
 		self.prepare()
 
 	def prepare(self):
-		self.filters = set()
+		# self.filters = set()
+		self.filters = {} # {filterId : None}
 		self.sources = {} # {FileName : filters}
 		self.includes = {} # {FileName : filters}
 
@@ -27,7 +28,8 @@ class ProjectBuilder:
 			filterName = self.relativeTo(fileName, self.project.sourceRoot).parent
 			filterName = prefix / filterName
 
-			self.filters.add(filterName)
+			#self.filters.add(filterName)
+			self.filters[filterName] = None
 			types[fileRelativePath] = filterName
 
 	def relativeTo(self, source, target):
@@ -60,9 +62,10 @@ class ProjectBuilder:
 
 	def genFilterContent(self):
 		maps = {}
-		maps['SourceFilesUuid'] = uuid.uuid4()
-		maps['IncludeFilesUuid'] = uuid.uuid4()
-		maps['ResourceFileUuid'] = uuid.uuid4()
+		projectUuid = self.project.uuid
+		maps['SourceFilesUuid'] = uuid.uuid3(projectUuid, 'Source Files')
+		maps['IncludeFilesUuid'] = uuid.uuid3(projectUuid, 'Include Files')
+		maps['ResourceFileUuid'] = uuid.uuid3(projectUuid, 'Resource Files')
 		maps['Sources'] = self.genSources()
 		maps['Includes'] = self.genIncludes()
 
@@ -75,9 +78,9 @@ class ProjectBuilder:
 		content = []
 
 		template = self.builder.template.open('filter_filter')
-		for filterId in self.filters:
+		for filterId, _ in self.sortAndIter(self.filters):
 			maps = {}
-			maps['Uuid'] = uuid.uuid4()
+			maps['Uuid'] = uuid.uuid3(self.project.uuid, str(filterId))
 			maps['FilterId'] = str(filterId)
 			content.append(template.format_map(maps))
 
@@ -86,7 +89,7 @@ class ProjectBuilder:
 	def genSources(self):
 		content = []
 		template = self.builder.template.open('filter_compile')
-		for fileName, filter in self.sources.items():
+		for fileName, filter in self.sortAndIter(self.sources):
 			maps = {}
 			maps['FileName'] = fileName
 			maps['Filter'] = str(filter)
@@ -94,10 +97,16 @@ class ProjectBuilder:
 
 		return ''.join(content)
 
+	def sortAndIter(self, d):
+		items = list(d.items())
+		items.sort()
+		for key, value in items:
+			yield key, value
+
 	def genIncludes(self):
 		content = []
 		template = self.builder.template.open('filter_include')
-		for fileName, filter in self.includes.items():
+		for fileName, filter in self.sortAndIter(self.includes):
 			maps = {}
 			maps['FileName'] = fileName
 			maps['Filter'] = filter
@@ -119,7 +128,8 @@ class ProjectBuilder:
 	def getProjectSources(self):
 		content = []
 		template = self.builder.template.open('project_source')
-		for fileName in self.sources:
+#		for fileName in self.sources:
+		for fileName, filter in self.sortAndIter(self.sources):
 			maps = {}
 			maps['FileName'] = fileName
 			content.append(template.format_map(maps))
@@ -129,7 +139,8 @@ class ProjectBuilder:
 	def getProjectIncludes(self):
 		content = []
 		template = self.builder.template.open('project_include')
-		for fileName in self.includes:
+		#for fileName in self.includes:
+		for fileName, filter in self.sortAndIter(self.includes):
 			maps = {}
 			maps['FileName'] = fileName
 			content.append(template.format_map(maps))

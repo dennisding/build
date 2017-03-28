@@ -3,6 +3,8 @@
 import uuid
 import pathlib
 
+BASE_UUID = uuid.UUID('1fa4a144-302f-4b31-8ba3-b97d6ae0b47f')
+
 sourceSuffix = {'.cpp', '.c', '.cxx'}
 headerSuffix = {'.h', '.hpp'}
 
@@ -13,8 +15,8 @@ class Project:
 		self.sourceRoot = ''
 		self.includeRoot = ''
 
-		self.uuid = uuid.uuid4() # random uuid
-		self.uuid = str(self.uuid).upper()
+		# self.uuid = uuid.uuid4() # random uuid
+		self.uuid = uuid.uuid3(BASE_UUID, name)
 
 	def prepare(self, projects):
 		# prepare argument

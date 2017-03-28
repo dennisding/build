@@ -17,7 +17,9 @@ class Builder:
 		self.genSolutions()
 
 	def iterProjects(self):
-		for name, project in self.projects.items():
+		items = list(self.projects.items())
+		items.sort()
+		for name, project in items:
 			yield name, project
 
 	def genSolutions(self):
