@@ -11,6 +11,14 @@ class Builder:
 
 		self.projects = {} # {name: projects}
 
+		self.prepare()
+
+	def prepare(self):
+		# win, ios, android
+		self.platforms = set(self.args.platforms)
+		# debug, hybrid, release
+		self.configs = set(['debug', 'hybrid', 'release'])
+
 	def build(self):
 		self.findProjects()
 		self.prepareProjects()

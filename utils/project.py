@@ -14,6 +14,7 @@ class Project:
 		self.name = name
 		self.sourceRoot = ''
 		self.includeRoot = ''
+		self.projectType = 'Exe'
 
 		# self.uuid = uuid.uuid4() # random uuid
 		self.uuid = uuid.uuid3(BASE_UUID, name)
@@ -23,7 +24,6 @@ class Project:
 		self.prepareEnv()
 
 		self.scanFiles()
-		self.genFilters()
 
 	def prepareEnv(self):
 		newRoot = self.base / pathlib.Path(self.root)
@@ -31,9 +31,6 @@ class Project:
 
 		self.sourceRoot = self.root / self.sourceRoot
 		self.includeRoot = self.root / self.includeRoot
-
-	def genFilters(self):
-		pass
 
 	def scanFiles(self):
 		self.sources = [] # sources
@@ -62,3 +59,6 @@ class LibProject(Project):
 
 class ExeProject(Project):
 	projectType = 'Exe'
+
+class DllProject(Project):
+	projectType = 'Dll'

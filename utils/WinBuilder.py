@@ -120,10 +120,31 @@ class ProjectBuilder:
 		maps['ProjectName'] = self.project.name
 		maps['Sources'] = self.getProjectSources()
 		maps['Includes'] = self.getProjectIncludes()
+		maps['ConfigurationType'] = self.getConfigurationType()
+
+		maps.update(self.getMacros())
 
 		template = self.builder.template.open('project')
 
 		return template.format_map(maps)
+
+	def getMacros(self):
+		maps = {}
+
+		maps['DebugMacros'] = ''
+		maps['HybridMacros'] = ''
+		maps['ReleaseMacros'] = ''
+
+		return maps
+
+	def getConfigurationType(self):
+		types = {
+			'Dll' : 'DynamicLibrary',
+			'Exe' : 'Application',
+			'Lib' : 'StaticLibrary',
+		}
+
+		return types[self.project.projectType]
 
 	def getProjectSources(self):
 		content = []
