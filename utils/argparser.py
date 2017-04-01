@@ -13,9 +13,6 @@ def parseArgs():
 	parser.add_argument('-D', dest = 'macros', \
 			action = 'append', default = [])
 
-#	parser.add_argument('--name', dest = 'name', \
-#				action = 'store', default = 'mao')
-
 	parser.add_argument('-p', '--platform', dest = 'platforms', \
 				action = 'append', default = ['win'])
 

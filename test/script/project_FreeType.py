@@ -13,8 +13,8 @@ class Project(project.LibProject):
 		self.macros = {} # {name:value}
 		self.depends = []
 
-		self.platforms = {} # ios win android
-		self.configs = {} # debug release, hybrid
+		self.platforms = {} # Ios Win Android
+		self.configs = {} # Debug Release, Hybrid
 
 		self.sourceRoot = ''
 		self.includeRoot = ''

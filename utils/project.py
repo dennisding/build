@@ -3,6 +3,9 @@
 import uuid
 import pathlib
 
+from . import platform
+from . import configs
+
 BASE_UUID = uuid.UUID('1fa4a144-302f-4b31-8ba3-b97d6ae0b47f')
 
 sourceSuffix = {'.cpp', '.c', '.cxx'}
@@ -22,8 +25,18 @@ class Project:
 	def prepare(self, projects):
 		# prepare argument
 		self.prepareEnv()
+		self.preparePlatforms()
+		self.prepareConfigs()
 
 		self.scanFiles()
+
+	def preparePlatforms(self):
+		for key, value in configs.items():
+			if key not in self.platforms:
+				self.platforms[key] = getattr(platforms, value)()
+
+	def prepareConfigs(self):
+		pass
 
 	def prepareEnv(self):
 		newRoot = self.base / pathlib.Path(self.root)
@@ -53,6 +66,9 @@ class Project:
 				process(child)
 			else:
 				self.walk(child, process)
+
+	def getDict(self, name, platform, config):
+		return {}
 
 class LibProject(Project):
 	projectType = 'Lib'

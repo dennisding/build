@@ -131,11 +131,27 @@ class ProjectBuilder:
 	def getMacros(self):
 		maps = {}
 
-		maps['DebugMacros'] = ''
-		maps['HybridMacros'] = ''
-		maps['ReleaseMacros'] = ''
+		configs = {
+			'DebugMacro' : 'debug',
+			'HybridMacros' : 'hybrid',
+			'ReleaseMacros' : 'release',
+		}
+
+		for key, value in configs.items():
+			macros = self.project.getDict('macros', 'win', value)
+			maps[key] = self.formatMacros(macros)
 
 		return maps
+
+	def formatMacros(self, macros):
+		content = []
+		for key, value in macros.items():
+			if value:
+				content.append('%s=%s'%(key, value))
+			else:
+				content.append(key)
+
+		return ';'.join(content)
 
 	def getConfigurationType(self):
 		types = {

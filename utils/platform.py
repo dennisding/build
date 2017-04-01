@@ -4,7 +4,7 @@ class Platform:
 	def __init__(self):
 		pass
 
-class Win32(Platform):
+class Win(Platform):
 	pass
 
 class Ios(Platform):
