@@ -8,7 +8,7 @@ class Project(project.LibProject):
 	def __init__(self, base, name):
 		super().__init__(base, name)
 
-		self.root = '../src/freetype-2.7.1/src'
+		self.root = '../src/freetype-2.7.1'
 
 		self.macros = {} # {name:value}
 		self.depends = []
@@ -16,5 +16,8 @@ class Project(project.LibProject):
 		self.platforms = {} # Ios Win Android
 		self.configs = {} # Debug Release, Hybrid
 
-		self.sourceRoot = ''
-		self.includeRoot = ''
+		self.sourceRoot = 'src'
+		self.includeRoot = 'include'
+
+		self.sourceExcluces = []
+		self.sourceIncludes = ['src/base/ftbase.c']

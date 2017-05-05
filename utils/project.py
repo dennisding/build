@@ -22,6 +22,9 @@ class Project:
 		# self.uuid = uuid.uuid4() # random uuid
 		self.uuid = uuid.uuid3(BASE_UUID, name)
 
+		self.sourceIncludes = []
+		self.sourceExcludes = []
+
 	def prepare(self, projects):
 		# prepare argument
 		self.prepareEnv()
@@ -29,8 +32,27 @@ class Project:
 		self.prepareConfigs()
 
 		self.scanFiles()
+		self.genExcludeFromCompile()
+
+	def genExcludeFromCompile(self):
+		self.excludeFromCompile = set()
+		if self.sourceIncludes: # exclude all files but this
+			includes = self.formatPath(self.sourceIncludes)
+			for f in self.sources:
+				if f not in includes:
+					self.excludeFromCompile.add(f)
+		elif self.sourceExcludes: # include all files but this
+			self.excludeFromCompile = self.formatPath(self.sourceExcludes)
+
+	def formatPath(self, paths):
+		result = set()
+		for p in paths:
+			result.add(self.root / p)
+
+		return result
 
 	def preparePlatforms(self):
+		return
 		for key, value in configs.items():
 			if key not in self.platforms:
 				self.platforms[key] = getattr(platforms, value)()

@@ -18,6 +18,7 @@ class ProjectBuilder:
 		self.filters = {} # {filterId : None}
 		self.sources = {} # {FileName : filters}
 		self.includes = {} # {FileName : filters}
+		self.relativeToFullName = {} # relativeName : fileName
 
 		self.processFiles(self.sources, 'Source Files', self.project.sources)
 		self.processFiles(self.includes, 'Header Files', self.project.includes)
@@ -31,6 +32,7 @@ class ProjectBuilder:
 			#self.filters.add(filterName)
 			self.filters[filterName] = None
 			types[fileRelativePath] = filterName
+			self.relativeToFullName[fileRelativePath] = fileName
 
 	def relativeTo(self, source, target):
 		sameParent = self.getSameParents(source, target)
@@ -66,8 +68,8 @@ class ProjectBuilder:
 		maps['SourceFilesUuid'] = uuid.uuid3(projectUuid, 'Source Files')
 		maps['IncludeFilesUuid'] = uuid.uuid3(projectUuid, 'Include Files')
 		maps['ResourceFileUuid'] = uuid.uuid3(projectUuid, 'Resource Files')
-		maps['Sources'] = self.genSources()
-		maps['Includes'] = self.genIncludes()
+		maps['Sources'] = self.genFilterSources()
+		maps['Includes'] = self.genFilterIncludes()
 
 		maps['Filters'] = self.genFilters()
 
@@ -86,7 +88,7 @@ class ProjectBuilder:
 
 		return ''.join(content)
 
-	def genSources(self):
+	def genFilterSources(self):
 		content = []
 		template = self.builder.template.open('filter_compile')
 		for fileName, filter in self.sortAndIter(self.sources):
@@ -103,7 +105,7 @@ class ProjectBuilder:
 		for key, value in items:
 			yield key, value
 
-	def genIncludes(self):
+	def genFilterIncludes(self):
 		content = []
 		template = self.builder.template.open('filter_include')
 		for fileName, filter in self.sortAndIter(self.includes):
@@ -118,8 +120,8 @@ class ProjectBuilder:
 		maps = {}
 		maps['Uuid'] = self.project.uuid
 		maps['ProjectName'] = self.project.name
-		maps['Sources'] = self.getProjectSources()
-		maps['Includes'] = self.getProjectIncludes()
+		maps['Sources'] = self.genProjectSources()
+		maps['Includes'] = self.genProjectIncludes()
 		maps['ConfigurationType'] = self.getConfigurationType()
 
 		maps.update(self.getMacros())
@@ -162,18 +164,24 @@ class ProjectBuilder:
 
 		return types[self.project.projectType]
 
-	def getProjectSources(self):
+	def genProjectSources(self):
 		content = []
 		template = self.builder.template.open('project_source')
-#		for fileName in self.sources:
+		excluded = self.builder.template.open('project_source_exclude')
 		for fileName, filter in self.sortAndIter(self.sources):
 			maps = {}
 			maps['FileName'] = fileName
-			content.append(template.format_map(maps))
+			fullName = self.relativeToFullName[fileName]
+			if fullName in self.project.excludeFromCompile:
+				result = excluded.format_map(maps)
+			else:
+				result = template.format_map(maps)
+
+			content.append(result)
 
 		return ''.join(content)
 
-	def getProjectIncludes(self):
+	def genProjectIncludes(self):
 		content = []
 		template = self.builder.template.open('project_include')
 		#for fileName in self.includes:
